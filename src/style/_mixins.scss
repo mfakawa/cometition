@@ -22,3 +22,11 @@
         }
     }
 }
+
+@mixin fontStyle ($size, $weight, $spacing) {
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $spacing;
+    text-transform: uppercase;
+    @content;
+}

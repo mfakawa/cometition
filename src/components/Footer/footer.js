@@ -1,5 +1,8 @@
 import React from 'react';
 import './footer.scss';
+import { Icon } from '@iconify/react';
+import linkedinBox from '@iconify/icons-zmdi/linkedin-box';
+import githubBox from '@iconify/icons-zmdi/github-box';
 
 
 const Footer = () => {
@@ -46,16 +49,13 @@ const Footer = () => {
             <div className="footer-bottom">
                 <div className="container">
                     <div className="copyrights">
-                        <div className="font-style-text">
+                        <div className="text-style">
                             Wszelkie prawa zastrzeżone &copy; 2019
                         </div>
                     </div>
-                    <div className="icons">
-                        <a href="https://www.facebook.com/"><i className="fab fa-facebook"></i></a>
-                        <a href="https://twitter.com/"><i className="fab fa-twitter-square"></i></a>
-                        <a href="https://developers.google.com/+/"><i className="fab fa-google-plus-square"></i></a>
-                        <a href="https://pl.pinterest.com/"><i className="fab fa-pinterest-square"></i></a>
-                        <a href="https://www.whatsapp.com/"><i className="fab fa-whatsapp-square"></i></a>
+                    <div className="footer-icons">
+                        <a href="https://github.com/mfakawa"><Icon icon={githubBox} /></a>
+                        <a href="https://www.linkedin.com/in/michal-kawa"><Icon icon={linkedinBox} /></a>
                     </div>
                 </div>
             </div>

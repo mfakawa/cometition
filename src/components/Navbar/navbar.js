@@ -12,7 +12,7 @@ class Navbar extends Component {
 
     listenScrollEvent = () => {
         if (window.scrollY > 1) {
-            this.setState({ background: '#35353B', heigth: 'auto', transition: '0.3s all' })
+            this.setState({ background: 'rgb(40, 40, 40)', heigth: 'auto', transition: '0.3s all' })
 
         } else {
             this.setState({ background: 'none', transition: '0.3s all' })
@@ -27,7 +27,7 @@ class Navbar extends Component {
         return (
             <div className="navbar" id="homepage">
                 <div className="navbar-background ">
-                    <div className="navbar-body">
+                    <div className="navbar-content">
                         <div className="navbar-top" style={{ background: this.state.background, height: this.state.height, transition: this.state.transition }}>
                             <div className="navbar-links">
                                 <label htmlFor="menu-toggle">☰</label>
@@ -36,9 +36,7 @@ class Navbar extends Component {
                                     <li ><a href="#homepage">Home</a></li>
                                     <li><a href="#about">O mnie</a></li>
                                     <li><a href="#awards">Doświadczenie</a></li>
-                                    <li><a href="#portfolio">Portfolio</a></li>
-                                    <li><a href="#partners">Współpraca</a></li>
-                                    <li><a href="#posts">Pasje</a></li>
+                                    <li><a href="#passion">Pasje</a></li>
                                     <li><a href="#contact">Kontakt</a></li>
                                 </ul>
                             </div>

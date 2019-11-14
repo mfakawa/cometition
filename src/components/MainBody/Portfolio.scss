@@ -1,0 +1,19 @@
+.container {
+    .body-portfolio {
+        padding: 20px 0;
+        
+        .body-portfolio-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .body-portfolio {
+            padding: 0px;   
+        }
+    }
+}
+
+       

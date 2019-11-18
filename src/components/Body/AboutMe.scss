@@ -1,0 +1,125 @@
+@import '../../style/mixins.scss';
+@import '../../style/variables.scss';
+
+
+.about-me {
+    height: auto;
+
+    .about-me-header {
+        text-align: center;
+        padding: 60px 0 40px;
+        
+        div {
+            @include fontStyle($headerFontSize, $boldFontWeight,  $narrowLetterSpacing);
+        }
+
+        p {
+            @include fontStyle($subtitleFontSize, $lightFontWeight,  $narrowLetterSpacing);
+            color: $smallTitleColor;
+
+        }
+    }
+
+    @media (max-width: 576px) {
+        .about-me-header {
+        padding: 40px 0 0;
+        }
+    }
+
+    .about-me-content {
+        padding: 0 40px;
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .about-me-content-picture {
+                width: 350px;
+                margin: 20px;
+                overflow: hidden;
+
+                img {
+                    filter: grayscale(100%);
+                    transition: 0.5s all;
+
+                    &:hover {
+                        filter: grayscale(0%);
+                        transform: scale(1.1);
+                    } 
+                }
+            }
+
+            .about-me-content-description {
+                margin: 20px;
+                width: 400px;
+                
+                div {
+                    @include fontStyle( $titleFontSize, $boldFontWeight, $narrowLetterSpacing);
+                    margin-bottom: 16px;
+                }
+            }
+
+            @media(max-width: 992px) {
+                .about-me-content-picture {
+                    width: 60%;
+                }
+
+                .about-me-content-description {
+                        width: 100%;
+                }
+            }
+
+            @media(max-width: 768px) {
+                .about-me-content-picture {
+                    width: 100%;
+                }
+            }
+
+            .about-me-content-skills {
+                margin: 20px;
+                width: 350px;
+
+                .about-me-content-skills-title {
+                    @include fontStyle( $titleFontSize, $boldFontWeight, $narrowLetterSpacing);
+                }
+
+                .single-skill {
+                    .single-skill-title {
+                        @include fontStyle($subtitleFontSize, $lightFontWeight, $narrowLetterSpacing);
+                        color: $smallTitleColor;
+                        padding: 20px 0 5px;
+                    }
+                    
+                    .bar-background {
+                        background-color:#DBDBDB;
+                        position: relative;
+                                            
+                        .bar-color-1 {
+                            position: absolute;
+                            width: 30%;
+                            background-color: #EF652A;
+                        }
+                        .bar-color-2 {
+                            position: absolute;
+                            width: 40%;
+                            background-color: #2FA1E1;
+                        }
+                        .bar-color-3 {
+                            position: absolute;
+                            width: 30%;
+                            background-color: #FCE421;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .about-me-content {
+        padding: 0;
+        }
+    }
+}

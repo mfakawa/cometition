@@ -1,4 +1,5 @@
 @import '../style/variables.scss';
+@import '../style/mixins.scss';
 
 
 * {
@@ -24,18 +25,27 @@ body {
 
 .text-style {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     text-align: justify;
-    line-height: 1.8;
+    line-height: 1.6;
     color: rgb(117, 117, 117);
     margin: 0 0 16px 0;
 }
 
-.font-style-tech {
-    font-weight: 600;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.bar {
+    height: 8px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.input-style {
+    padding: 15px 0;
+    border:none;
+    border-bottom: 1px solid rgb(160, 158, 158);
+    outline-width: 0;
+    @include fontStyle($smallTitleFontSize, $lightFontWeight,  $narrowLetterSpacing);
 }
 
 button {
@@ -47,16 +57,11 @@ button {
     border: none;
     transition: 0.3s all;
     outline-width: 0;
+    width: auto;
+    padding: 20px 30px;
 
     &:hover {
         background-color: $hoverColor;
     }
 }
 
-.bar {
-    height: 8px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}

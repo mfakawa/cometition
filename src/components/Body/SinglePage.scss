@@ -2,24 +2,37 @@
 @import '../../style/mixins';
 
 
-.body-portfolio-item {
+.single-page {
     width: 500px;
-    padding: 20px 40px;
+    padding: 20px;
     
-    .body-skills-item {
+    .single-page-link {
+        overflow: hidden;
+
+        img {
+            margin-bottom: 6px;
+            transition: 0.5s all;
+
+            &:hover {
+                transform: scale(1.1)
+            }
+        }
+    }
+
+    .single-page-content {
         padding: 10px;
 
-        .font-style-title {
+        .single-page-content-title {
             @include fontStyle( $titleFontSize, $boldFontWeight, $narrowLetterSpacing);
             margin: 0 0 8px;
         }
 
-        .font-style-tech {
+        .single-page-content-tech {
             @include fontStyle( $smallTitleFontSize, $boldFontWeight, $narrowLetterSpacing);
             margin: 0 0 8px;
         }
 
-        .font-style-icons {
+        .single-page-content-icons {
             display: flex;
             align-items: center;
             
@@ -37,19 +50,13 @@
 }
 
 @media(max-width: 1200px) {
-    .body-portfolio-item {
+    .single-page {
         width: 80%;    
     }
 }
 
 @media(max-width: 992px) {
-    .body-portfolio-item {
+    .single-page {
         width: 100%;    
-    }
-}
-
-@media(max-width: 768px) {
-    .body-portfolio-item {
-        padding: 10px;   
     }
 }

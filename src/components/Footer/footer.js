@@ -18,25 +18,19 @@ const Footer = () => {
                     <div className="footer-top-pools">
                         <div className="footer-top-pools-line-1">
                             <div className="single-pool">
-                                <form>
-                                    <input type="text" name="name" placeholder="name" />
-                                </form>
+                                <input className="input-style" type="text" name="name" placeholder="name" />
                             </div>
                             <div className="single-pool">
-                                <form>
-                                    <input type="text" name="e-mail" placeholder="e-mail" />
-                                </form>
+                                <input className="input-style" type="text" name="e-mail" placeholder="e-mail" />
                             </div>
                             <div className="single-pool">
-                                <form>
-                                    <input type="text" name="phone" placeholder="phone" />
-                                </form>
+                                <input className="input-style" type="text" name="phone" placeholder="phone" />
                             </div>
                         </div>
                         <div className="footer-top-pools-line-2">
                             <div className="single-pool">
                                 <form>
-                                    <textarea name="message" col="" rows="10" placeholder="message" />
+                                    <textarea className="input-style" name="message" col="" rows="10" placeholder="message" />
                                 </form>
                             </div>
                         </div>

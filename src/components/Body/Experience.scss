@@ -1,0 +1,98 @@
+    @import '../../style/variables.scss';
+    @import '../../style/mixins.scss';
+
+    .experience {
+        height: auto;
+
+        .experience-header {
+            text-align: center;
+            padding: 40px 0;
+            
+            div {
+                @include fontStyle($headerFontSize, $boldFontWeight, $narrowLetterSpacing);
+            }
+    
+            p {
+                @include fontStyle($subtitleFontSize, $lightFontWeight,  $narrowLetterSpacing);
+                color: $smallTitleColor;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .experience-header {
+                padding: 10px 0;
+            }
+        }
+    
+    .experience-technologies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+        background-color: rgb(245, 245, 245);
+
+        .technology {
+            margin: 20px 40px;
+            width: auto;
+            text-align: center;
+            color: $smallTitleColor;
+            transition: 0.3s all;
+            cursor: pointer;
+            filter: grayscale(100%);
+
+            .technology-icon {
+                height: 60px;
+                font-size: 60px;
+            }
+
+            &:hover {
+                color: black;
+                filter: grayscale(0);
+            }
+
+            .technology-title {
+                @include fontStyle($smallTitleFontSize, $lightFontWeight, $narrowLetterSpacing);
+                margin: 16px 0 0 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .technology {
+                margin: 15px;
+            
+                .technology-icon {
+                    height: 40px;
+                    font-size: 40px;
+                }
+
+                .technology-title {
+                    @include fontStyle(12px, $lightFontWeight, $narrowLetterSpacing);
+                    margin: 8px 0 0 0;
+                
+                }
+            }
+        }
+    }
+
+    .experience-pages {
+        .container {
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0;
+            }
+        }
+    }
+}

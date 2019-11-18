@@ -1,21 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar/navbar';
-import MainBody from './components/MainBody/mainBody';
 import Footer from './components/Footer/footer';
+import AboutMe from './components/Body/AboutMe';
+import Experience from './components/Body/Experience';
+import Passion from './components/Body/Passion';
 
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <>
-          <Navbar />
-          <MainBody />
-          <Footer />
-        </>
-      </BrowserRouter>
-    )
-  }
+function App() {
+  return (
+    <BrowserRouter>
+      <>
+        <Navbar />
+        <AboutMe />
+        <Experience />
+        <Passion />
+        <Footer />
+      </>
+    </BrowserRouter>
+  )
 }
+
+
 export default App;
